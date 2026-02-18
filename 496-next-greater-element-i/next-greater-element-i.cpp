@@ -13,8 +13,8 @@ public:
         }
         vector<int> r;
         for(int i = 0; i < nums1.size(); i++){
-            int idx = find(nums2.begin(), nums2.end(), nums1[i]) - nums2.begin();
-            r.push_back(ans[idx]);
+            int id = find(nums2.begin(), nums2.end(), nums1[i]) - nums2.begin();
+            r.push_back(ans[id]);
         }
         return r;
     }
