@@ -12,7 +12,7 @@
 class Solution {
 public:
     int diameterOfBinaryTree(TreeNode* root) {
-        if(!root) return 0;
+        if(!root) return -1;
         int diameter = 0;
         depth(root, diameter);
         return diameter;
@@ -22,6 +22,6 @@ public:
         int lh =depth(node->left, diameter);
         int rh = depth(node->right, diameter);
         diameter = max(diameter, lh + rh);
-        return max(lh, rh) + 1;
+        return max(lh, rh)+1;
     }
 };
