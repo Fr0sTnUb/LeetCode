@@ -4,7 +4,7 @@ public:
         if(i < 0 || i >= grid.size() || j < 0 || j >= grid[0].size() || grid[i][j] == '0'){
             return 0;
         }
-        
+
         grid[i][j] = '0';
 
         dfs(grid, i + 1, j);
@@ -16,6 +16,7 @@ public:
     }
 
     int numIslands(vector<vector<char>>& grid) {
+        if(grid.empty()) return 0;
         int m = grid.size();
         int n = grid[0].size();
         int count = 0;
